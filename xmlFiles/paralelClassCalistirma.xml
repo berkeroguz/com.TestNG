@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Classlari calistirma" parallel="classes" thread-count="2">
+    <test name="Istenen Class'lari calistirma">
+        <classes>
+            <class name="tests.day16_SmokeTests.C01_PozitifLoginTest"></class>
+            <class name="tests.day16_SmokeTests.C02_NegatifLoginTesti"></class>
+
+        </classes>
+    </test>
+
+</suite>

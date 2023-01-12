@@ -27,7 +27,6 @@ public class C02_NegatifLoginTesti {
 
         Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
     }
-
     @Test
     public void yanlisSifreTesti(){
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
@@ -40,7 +39,6 @@ public class C02_NegatifLoginTesti {
 
         Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
     }
-
     @Test
     public void yanlisSifreYanlisEmailTesti(){
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
@@ -52,6 +50,7 @@ public class C02_NegatifLoginTesti {
         qualitydemyPage.loginButonu.click();
 
         Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
+
     }
 
 

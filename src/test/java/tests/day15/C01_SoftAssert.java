@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class C01_SoftAssert {
 
-    @Test
+    @Test (groups = "minireg2")
     public void test01(){
 
         // amazon anasayfaya gidin
@@ -48,7 +48,7 @@ public class C01_SoftAssert {
         softAssert.assertTrue(sonucSayisiInt>1000,"1000'den büyük değil");
 
         softAssert.assertAll(); //Demezsen raporlama yapmaz.
-        Driver.getDriver().close();
+        Driver.closeDriver();
 
 
     }

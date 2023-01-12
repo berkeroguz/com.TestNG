@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!-- Method'lari seçerken bir class içerisnideki
+ -- Özellikle çalıştırılacak methodlari ifade etmek istersek include
+ - özellikle calıstırılmayacak methodlari ifade etmek istersek exclude kullanırız.
+ -->
+<suite name="Method Calistirma">
+    <test name="Belirli Methodlari çalistirma">
+        <classes>
+            <class name="tests.day15.C05_NegativeLoginTesti">
+                <methods>
+
+                    <include name="yanlisEmailtesti"></include>
+                </methods>
+            </class>
+            <class name="tests.day16_SmokeTests.C02_NegatifLoginTesti">
+                <!-- Başka packagedeki classtan yanlisemailtesti dısındaki tüm methdları istersek.-->
+                <methods>
+                    <exclude name="yanlisEmailTesti"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

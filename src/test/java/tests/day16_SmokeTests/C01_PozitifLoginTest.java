@@ -1,5 +1,7 @@
 package tests.day16_SmokeTests;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.QualitydemyPage;
@@ -18,6 +20,8 @@ public class C01_PozitifLoginTest {
 
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         QualitydemyPage qualitydemyPage=new QualitydemyPage();
+
+        qualitydemyPage.ilkSayfaCookieAccept.click();
         qualitydemyPage.ilkLoginLinki.click();
 
         qualitydemyPage.kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecerliUsername"));
@@ -28,6 +32,12 @@ public class C01_PozitifLoginTest {
 
         Assert.assertTrue(qualitydemyPage.basariliGirisCoursesLinki.isDisplayed());
 
-        Driver.getDriver().close();
+        ReusableMethods.bekle(3);
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//*[@href='javascript:;'])[5]"))).perform();
+        Driver.getDriver().findElement(By.xpath("(//div/ul/li/a/i)[7]")).click();
+        ReusableMethods.bekle(2);
+        Driver.closeDriver();
     }
 }
