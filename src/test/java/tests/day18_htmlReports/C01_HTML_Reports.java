@@ -12,7 +12,7 @@ public class C01_HTML_Reports extends TestBaseRapor {
     @Test
     public void test01(){
         extentTest=extentReports.createTest("Nutella testi ","Kullanici amazonda nutella arayabilmeli");
-
+        bilgilendirmeRapor("Taner","DENEME BASLIK","Test 01 - Nutella");
 
         //amazona gidelm
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
